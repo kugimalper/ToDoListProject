@@ -9,7 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var toDoElement = ""
+    var toDoElementsArr = [String]()
+    
+    @IBOutlet weak var enterNameTextField: UITextField!
+    
+    
+    
+    
+    @IBAction func addButton(_ sender: Any) {
+        
+       //print (enterNameTextField.text!)
+        toDoElement = enterNameTextField.text!
+        toDoElementsArr.append (toDoElement)
+        
+        print (toDoElementsArr)
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
