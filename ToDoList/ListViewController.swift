@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+var names : String = " "
 
 class ListViewController: UIViewController {
     
@@ -17,7 +17,14 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
+        
+        for (key,value) in toDoElementsArr.enumerated() {
+            names += String(key + 1) + "-) " + value
+        
+        
+        toDoList.text! = names
+}
         // Do any additional setup after loading the view.
     }
 
