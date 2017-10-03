@@ -13,7 +13,20 @@ var toDoElementsArr = [String]()
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var showSwitchOutlet: UISwitch!
+    @IBAction func showaddField(_ sender: UISwitch) {
+//print (sender.isOn)
+        
+        if sender.isOn == true {
+            addFieldoutlet.isHidden = false
+        } else {
+            addFieldoutlet.isHidden = true
+        }
+        
+        
+    }
     
+    @IBOutlet weak var addFieldoutlet: UIView!
     
     @IBOutlet weak var enterNameTextField: UITextField!
     
@@ -30,6 +43,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addFieldoutlet.isHidden = true
+        showSwitchOutlet.isOn = false
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
     
